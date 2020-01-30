@@ -15,7 +15,7 @@ def status():
 def stats():
     """ Route for getting states stats data. """
     d = {}
-    classes = ['amenities', 'cities', 'places', 'reviews', 'states', 'users']
+    classes = ['Amenity', 'City', 'Place', 'Review', 'State', 'User']
     for clss in classes:
         d[clss] = storage.count(clss)
     return jsonify(d)
