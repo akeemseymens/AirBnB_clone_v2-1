@@ -3,6 +3,7 @@ from flask import jsonify, abort, request
 from . import app_views
 from models import storage
 from models.state import State
+"""Endpoints related to States"""
 
 
 @app_views.route('/states', methods=['GET', 'POST'])
