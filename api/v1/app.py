@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 import os
 from flask import Flask, jsonify
 from models import storage
@@ -24,4 +25,4 @@ def page_not_found(e):
 if __name__ == '__main__':
     host = os.getenv('HBNB_API_HOST', '0.0.0.0')
     port = int(os.getenv('HBNB_API_PORT', '5000'))
-    app.run(host=host, port=port, threaded=True, debug=True)
+    app.run(host=host, port=port, threaded=True)
