@@ -18,8 +18,6 @@ def status():
 @app_views.route('/stats')
 def stats():
     """ Route for getting states stats data. """
-    d = {}
     classes = ['Amenity', 'City', 'Place', 'Review', 'State', 'User']
-    for clss in classes:
-        d[clss] = storage.count(clss)
+    d = {cls_name: storage.count(cls_name) for cls_name in classes}
     return jsonify(d)
