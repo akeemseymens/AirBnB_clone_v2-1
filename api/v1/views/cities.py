@@ -46,4 +46,4 @@ def state_cities(state_id):
             state[k] = v
         return state, 200
 
-    return jsonify(state.cities)
+    return jsonify([city.to_dict() for city in state.cities])
