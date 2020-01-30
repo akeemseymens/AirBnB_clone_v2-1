@@ -6,6 +6,7 @@ from models.state import State
 
 @app_views.route('/states', methods=['GET', 'POST'])
 def states():
+    """ Route for getting states data. """
     if request.method == 'POST':
         json = request.get_json()
         if json is None:
@@ -21,6 +22,7 @@ def states():
 
 @app_views.route('/states/<state_id>', methods=['GET', 'DELETE', 'PUT'])
 def state(state_id):
+    """ Route for getting specific state data. """
     state = storage.get('State', state_id)
     if state is None:
         abort(404)

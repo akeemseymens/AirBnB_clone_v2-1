@@ -10,11 +10,13 @@ app.register_blueprint(app_views)
 
 @app.teardown_appcontext
 def teardown_db(e):
+    """Close the database connection"""
     storage.close()
 
 
 @app.errorhandler(404)
 def page_not_found(e):
+    """404 page"""
     d = {'error': 'Not found'}
     return jsonify(d), 404
 
