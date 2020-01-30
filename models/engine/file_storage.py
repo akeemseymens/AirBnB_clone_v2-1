@@ -35,7 +35,7 @@ class FileStorage:
         return self.__objects
 
     def get(self, cls, id):
-	"""retrieve one object."""
+        """retrieve one object."""
         return self.all(cls).get(cls + '.' + id)
 
     def count(self, cls=None):
