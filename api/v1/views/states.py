@@ -35,7 +35,7 @@ def state(state_id):
         json = request.json()
         if json is None:
             return 'Not a JSON', 400
-        for k, v is json.items():
+        for k, v in json.items():
             if k in ('id', 'updated_at', 'created_at'):
                 pass
             state[k] = v
