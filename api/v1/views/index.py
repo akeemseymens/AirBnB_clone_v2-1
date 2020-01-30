@@ -1,4 +1,8 @@
 #!/usr/bin/python3
+"""
+Main views for the api/
+"""
+
 from flask import jsonify
 from . import app_views
 from models import storage

@@ -1,4 +1,8 @@
 #!/usr/bin/python3
+"""
+Create a Flask app.
+"""
+
 import os
 from flask import Flask, jsonify
 from models import storage
