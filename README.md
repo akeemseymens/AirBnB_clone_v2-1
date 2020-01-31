@@ -169,7 +169,7 @@ EOF  all  create  destroy  help  quit  show  update
 ```
 
 ## Bugs
-No known bugs at this time. 
+Bugs are being tested and worked on.
 
 ## Authors
 Akeem Seymens - [Github](https://github.com/akeemseymens) / [Twitter](https://twitter.com/suenoism13)  
