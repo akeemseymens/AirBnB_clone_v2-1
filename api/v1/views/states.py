@@ -2,7 +2,7 @@
 """Endpoints related to States"""
 
 from flask import jsonify, abort, request, make_response
-from . import app_views
+from api.v1.views import app_views
 from models import storage
 from models.state import State
 
@@ -31,7 +31,7 @@ def state(state_id):
         abort(404)
 
     if request.method == 'DELETE':
-        storage.delete(state)
+        state.delete()
         storage.save()
         return '{}', 200
 
