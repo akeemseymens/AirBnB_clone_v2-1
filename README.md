@@ -12,6 +12,7 @@ The API services allow for connections between the front and the backend.
 * Python stylecode format with [```PEP8```](https://www.python.org/dev/peps/pep-0008/)
 * ```MySQL server 5.7.x```
 * ```SQLAlchemy```
+* More applications to be determined.
 
 
 # AirBnB Clone - The Console
