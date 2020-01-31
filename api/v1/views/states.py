@@ -18,7 +18,7 @@ def states():
             return 'Missing name', 400
         state = State(**json)
         storage.new(state)
-        return state, 201
+        return jsonify(state.to_dict()), 201
 
     return jsonify([state.to_dict() for state in storage.all('State').values()])
 
