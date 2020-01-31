@@ -7,11 +7,12 @@
 This team project is part of the Holberton School Full-Stack Software Engineer program.
 It's the first step towards building a first full web application: an AirBnB clone.
 This first step consists of a custom command-line interface for data management, and the base classes for the storage of this data.
-The API services allow for connections between the front and the backend.
+The API services allow for connections between the front and the backend. Great application to understand API's.
 * All code was created on ```Python 3.4``` or greater.
 * Python stylecode format with [```PEP8```](https://www.python.org/dev/peps/pep-0008/)
 * ```MySQL server 5.7.x```
 * ```SQLAlchemy```
+* More applications to be determined.
 
 
 # AirBnB Clone - The Console
