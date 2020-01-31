@@ -35,13 +35,13 @@ def state(state_id):
         return '{}', 200
 
     if request.method == 'PUT':
-        json = request.json()
+        json = request.get_json()
         if json is None:
             return 'Not a JSON', 400
         for k, v in json.items():
             if k in ('id', 'updated_at', 'created_at'):
-                pass
-            state[k] = v
-        return state, 200
+                continue
+            setattr(state, k, v)
+        return jsonify(state.to_dict()), 200
 
     return jsonify(state.to_dict())
