@@ -9,6 +9,8 @@ It's the first step towards building a first full web application: an AirBnB clo
 This first step consists of a custom command-line interface for data management, and the base classes for the storage of this data.
 * All code was created on ```Python 3.4``` or greater.
 * Python stylecode format with [```PEP8```](https://www.python.org/dev/peps/pep-0008/)
+* ```MySQL server 5.7.x```
+* ```SQLAlchemy```
 
 
 # AirBnB Clone - The Console
