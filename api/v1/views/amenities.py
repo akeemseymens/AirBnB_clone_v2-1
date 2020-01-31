@@ -28,7 +28,7 @@ def amenity():
 def amenity(amenity_id):
     """ Route for getting specific state data. """
     amenity = storage.get('Amenity',amenity_id)
-    if state is None:
+    if amenity is None:
         abort(404)
 
     if request.method == 'DELETE':
@@ -36,13 +36,13 @@ def amenity(amenity_id):
         return '{}', 200
 
     if request.method == 'PUT':
-        json = request.json()
+        json = request.get_json()
         if json is None:
             return 'Not a JSON', 400
         for k, v in json.items():
             if k in ('id', 'updated_at', 'created_at'):
-                pass
-            amenity[k] = v
-        return amenity, 200
+                continue
+            setattr(amenity, k, v)
+        return jsonify(amenity.to_dict(), 200
 
     return jsonify(amenity.to_dict())
