@@ -22,7 +22,7 @@ def state_cities(state_id):
             return 'Not a JSON', 400
         if 'name' not in json:
             return 'Missing name', 400
-        city = City(**json)
+        city = City(state_id=state_id, **json)
         storage.new(city)
         storage.save()
         return jsonify(city.to_dict()), 201
