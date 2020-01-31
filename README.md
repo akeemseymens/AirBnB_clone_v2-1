@@ -9,7 +9,7 @@ It's the first step towards building a first full web application: an AirBnB clo
 This first step consists of a custom command-line interface for data management, and the base classes for the storage of this data.
 The API services allow for connections between the front and the backend. Great application to understand API's. Our team took Holberton's documentation and made it custom for our cohort. Brought to you by Holberton School, based in San Francisco. 
 
-**Cohort 09
+* Cohort 09
 
 * All code was created on ```Python 3.4``` or greater.
 * Python stylecode format with [```PEP8```](https://www.python.org/dev/peps/pep-0008/)
