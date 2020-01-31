@@ -4,11 +4,11 @@
 from flask import jsonify, abort, request
 from . import app_views
 from models import storage
-from models.state import Amenity
+from models.amenity import Amenity
 
 
 @app_views.route('/amenities/', methods=['GET', 'POST'])
-def amenity():
+def amenities():
     """ Route for getting Amenity data. """
     if request.method == 'POST':
         json = request.get_json()
@@ -46,6 +46,6 @@ def amenity(amenity_id):
                 continue
             setattr(amenity, k, v)
         amenity.save()
-        return jsonify(amenity.to_dict(), 200
+        return jsonify(amenity.to_dict()), 200
 
     return jsonify(amenity.to_dict())
