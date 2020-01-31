@@ -1,5 +1,21 @@
+<p align="center">
+    <img src="https://i.imgur.com/JOhaZ5m.png">
+</p>
+
+## Description
+
+This team project is part of the Holberton School Full-Stack Software Engineer program.
+It's the first step towards building a first full web application: an AirBnB clone.
+This first step consists of a custom command-line interface for data management, and the base classes for the storage of this data.
+The API services allow for connections between the front and the backend.
+* All code was created on ```Python 3.4``` or greater.
+* Python stylecode format with [```PEP8```](https://www.python.org/dev/peps/pep-0008/)
+* ```MySQL server 5.7.x```
+* ```SQLAlchemy```
+
+
 # AirBnB Clone - The Console
-The console is the first segment of the AirBnB project at Holberton School that will collectively cover fundamental concepts of higher level programming. The goal of AirBnB project is to eventually deploy our server a simple copy of the AirBnB Website(HBnB). A command interpreter is created in this segment to manage objects for the AirBnB(HBnB) website.
+The console is the first segment of the AirBnB project at Holberton School that will collectively cover fundamental concepts of higher level programming. The goal of AirBnB project is to eventually deploy our server a simple copy of the AirBnB Website(HBnB). A command interpreter is created in this segment to manage objects for the AirBnB(HBnB) website. 
 
 #### Functionalities of this command interpreter:
 * Create a new object (ex: a new User or a new Place)
@@ -153,12 +169,11 @@ EOF  all  create  destroy  help  quit  show  update
 ```
 
 ## Bugs
-No known bugs at this time. 
+Bugs are being tested and worked on.
 
 ## Authors
 Akeem Seymens - [Github](https://github.com/akeemseymens) / [Twitter](https://twitter.com/suenoism13)  
 James Benjamin Cook - [Github](https://github.com/benjamesian) / [Twitter](https://twitter.com/benjamesian)
 
-Second part of Airbnb: Joann Vuong
 ## License
 Public Domain. No copy write protection. 
