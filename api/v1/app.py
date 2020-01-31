@@ -12,7 +12,9 @@ from flask_cors import CORS
 app = Flask(__name__)
 
 app.register_blueprint(app_views)
-cors = CORS(app, resources={r"/*": {"app_views": "*"}})
+cors = CORS(app, resources={
+            r"/*": {os.getenv('HBNB_API_HOST', '0.0.0.0'): "*"}})
+
 
 @app.teardown_appcontext
 def teardown_db(e):
