@@ -13,9 +13,9 @@ def states():
     if request.method == 'POST':
         json = request.get_json()
         if json is None:
-            return 'Not a JSON', 400
+            return abort(make_response('Not a JSON', 400))
         if 'name' not in json:
-            return 'Missing name', 400
+            return abort(make_response('Missing name', 400))
         state = State(**json)
         state.save()
         return jsonify(state.to_dict()), 201
@@ -38,7 +38,7 @@ def state(state_id):
     if request.method == 'PUT':
         json = request.get_json()
         if json is None:
-            return 'Not a JSON', 400
+            return abort(make_response('Not a JSON', 400))
         for k, v in json.items():
             if k in ('id', 'updated_at', 'created_at'):
                 continue
