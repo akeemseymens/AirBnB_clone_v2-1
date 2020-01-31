@@ -175,6 +175,5 @@ No known bugs at this time.
 Akeem Seymens - [Github](https://github.com/akeemseymens) / [Twitter](https://twitter.com/suenoism13)  
 James Benjamin Cook - [Github](https://github.com/benjamesian) / [Twitter](https://twitter.com/benjamesian)
 
-Second part of Airbnb: Joann Vuong
 ## License
 Public Domain. No copy write protection. 
