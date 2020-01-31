@@ -8,7 +8,7 @@ from models.review import Review
 
 
 @app_views.route('/places/<place_id>/reviews/', methods=['GET', 'POST'])
-def reviews():
+def reviews(place_id):
     """ Route for getting reviews data. """
     place = storage.get('Place', place_id)
     if place is None:

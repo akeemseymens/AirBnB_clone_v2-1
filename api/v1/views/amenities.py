@@ -18,6 +18,7 @@ def amenity():
             return 'Missing name', 400
         amenity = Amenity(**json)
         storage.new(amenity)
+        storage.save()
         return amenity.to_dict(), 201
 
     return jsonify([amenity.to_dict() for amenity
@@ -27,7 +28,7 @@ def amenity():
 @app_views.route('/amenities/<amenity_id>', methods=['GET', 'DELETE', 'PUT'])
 def amenity(amenity_id):
     """ Route for getting specific state data. """
-    amenity = storage.get('Amenity',amenity_id)
+    amenity = storage.get('Amenity', amenity_id)
     if amenity is None:
         abort(404)
 
@@ -44,6 +45,7 @@ def amenity(amenity_id):
             if k in ('id', 'updated_at', 'created_at'):
                 continue
             setattr(amenity, k, v)
+        amenity.save()
         return jsonify(amenity.to_dict(), 200
 
     return jsonify(amenity.to_dict())
