@@ -17,8 +17,7 @@ def states():
         if 'name' not in json:
             return 'Missing name', 400
         state = State(**json)
-        storage.new(state)
-        storage.save()
+        state.save()
         return jsonify(state.to_dict()), 201
 
     return jsonify([state.to_dict() for state in storage.all('State').values()])
@@ -44,7 +43,7 @@ def state(state_id):
             if k in ('id', 'updated_at', 'created_at'):
                 continue
             setattr(state, k, v)
-        storage.save()
+        state.save()
         return jsonify(state.to_dict()), 200
 
     return jsonify(state.to_dict())
