@@ -16,9 +16,9 @@ def amenity():
             return 'Not a JSON', 400
         if 'name' not in json:
             return 'Missing name', 400
-        Amenity = Amenity(**json)
+        amenity = Amenity(**json)
         storage.new(amenity)
-        return amenity, 201
+        return amenity.to_dict(), 201
 
     return jsonify([amenity.to_dict() for amenity
                     in storage.all('amenity').values()])
