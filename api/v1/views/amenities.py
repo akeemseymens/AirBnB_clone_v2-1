@@ -33,6 +33,7 @@ def amenity(amenity_id):
 
     if request.method == 'DELETE':
         storage.delete(amenity)
+        storage.save()
         return '{}', 200
 
     if request.method == 'PUT':
