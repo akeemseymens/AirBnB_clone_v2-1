@@ -20,7 +20,7 @@ def states():
         state.save()
         return jsonify(state.to_dict()), 201
 
-    return jsonify([state.to_dict() for state in storage.all('State').values()])
+    return jsonify([s.to_dict() for s in storage.all('State').values()])
 
 
 @app_views.route('/states/<state_id>', methods=['GET', 'DELETE', 'PUT'])
